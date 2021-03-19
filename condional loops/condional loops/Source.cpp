@@ -4,6 +4,7 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
+#include <stdlib.h>  
 using namespace std;
 
 
@@ -20,8 +21,11 @@ int main()
 	for (int i = 0; i <= numArrays; i++)
 	{
 		string raw;
-		getline(cin, raw);
-		elementInput.push_back(raw);
+		while (getline(cin, raw, ' '))
+		{
+			elementInput.push_back(raw);
+		}
+		
 	}
 
 	for (int i = 0; i < numArrays; i++)
